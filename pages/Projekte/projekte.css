@@ -1,0 +1,148 @@
+body {
+    background-color: black;
+  }
+
+  .card-img-top{
+    height: 14em;
+  }
+
+  .header-container{
+    background-color: black;
+  }
+
+  .logo{
+    color: white;
+  }
+
+.logo-col{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button-col{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.svg{
+    width: 50px;
+    height: 50px;
+}
+
+.offcanvas{
+    background-color: black;
+    color: white;
+}
+
+.nav-link{
+    display: flex;
+    justify-content: center;
+    font-family: 'Concert One', sans-serif;
+    font-family: 'Leckerli One', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    font-family: 'Concert One', sans-serif;
+    font-family: 'Leckerli One', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+    color: white;
+}
+
+.project-title{
+    margin-top: 10em;
+}
+
+.button{
+    color: white;
+}
+
+.bakeflix-card{
+  background-color: #dc0000;
+    color: white;
+}
+
+.eat-fresh-card{
+    background-color: #00c481;
+    color: white;
+}
+
+.landingpage-card{
+    background-color: #9B0000;
+    color: white;
+}
+
+.spotify-card{
+  background-color: #EC8F5E;
+  color: white;
+}
+
+.fresh{
+    background-color: white; 
+    border-radius: 30px; 
+    color: #00c481
+}
+
+.fresh:hover {
+    background-color: #00c481; /* Ändern der Hintergrundfarbe bei Hover */
+    color: white; /* Ändern der Textfarbe bei Hover */
+    border: 2px solid white;
+  }
+
+.landing{
+  background-color: white; 
+  border-radius: 30px; 
+  color: #9B0000
+}
+
+.landing:hover{
+  background-color: #9B0000; /* Ändern der Hintergrundfarbe bei Hover */
+  color: white; /* Ändern der Textfarbe bei Hover */
+  border: 2px solid white;
+}
+.mood{
+  background-color: white; 
+  border-radius: 30px; 
+  color: #EC8F5E
+}
+
+.mood:hover{
+  background-color: #EC8F5E; /* Ändern der Hintergrundfarbe bei Hover */
+  color: white; /* Ändern der Textfarbe bei Hover */
+  border: 2px solid white;
+}
+
+.bakeflix{
+  background-color: white;
+  border-radius: 30px;
+  color: #dc0000;
+}
+
+.bakeflix:hover{
+background-color: #dc0000;
+color: white;
+border: 2px solid white;;
+}
+
+  .col{
+    display: flex;
+    justify-content: center;
+  }
+
+  .container{
+    margin-top: 5em;
+  }
+
+  .logo{
+    margin-left: 1em;
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
