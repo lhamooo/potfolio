@@ -96,3 +96,21 @@ main{
     background-color: white;
     color: #00c481;
 }
+
+.info-icon{
+    color: white;
+    margin-top: 0.25em;
+    margin-left: -0.5em;
+}
+
+.modal-button{
+    background-color: red;
+    border-radius: 30px;
+    color: white;
+    margin-right: 1em;
+}
+
+.modal-button:hover{
+    background-color: white;
+    color: red;
+}
