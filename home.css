@@ -73,6 +73,8 @@ main{
 
 .name-container{
     margin-bottom: 4em;
+    display: flex;
+    justify-content: center;
 }
 
 .offcanvas{
@@ -161,4 +163,10 @@ main{
 
   .text {
     font-size: 44px; /* Standard-Schriftgröße */
+  }
+
+  .gif{
+    margin-top: 12em;
+    display: flex;
+    justify-content: center;
   }
