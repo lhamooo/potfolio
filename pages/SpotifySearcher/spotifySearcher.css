@@ -70,6 +70,7 @@ main{
 
 .mood-p{
     color: white;
+    font-size: large;
 }
 
 .undertitel{
@@ -91,6 +92,7 @@ main{
     background-color:#EC8F5E ;
     border-radius: 30px;
     color: white;
+    font-size: large;
 }
 
 .spotify-button:hover{

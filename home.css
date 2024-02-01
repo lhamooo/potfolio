@@ -36,15 +36,26 @@ main{
 }
 
 .name{
+    margin-top: 2em;
     display: flex;
     justify-content: center;
-    font-size: 10em;
+    font-size: 12em;
     color: white;
     font-family: 'Concert One', sans-serif;
     font-family: 'Leckerli One', cursive;
     font-family: 'Oswald', sans-serif;
+    cursor: pointer;
 
 }
+  
+.first-letter {
+    color: black; /* Textfarbe */
+    text-shadow: -3px -3px 0 white,  
+                  3px -3px 0 white,
+                 -3px 3px 0 white,
+                  3px 3px 0 white; /* Textschatten mit blauer Farbe */
+  
+  }
 
 .project-button{
     display: block;
@@ -85,3 +96,69 @@ main{
 .logo{
     margin-left: 1em;
 }
+
+.titel-projekte{
+    display: flex;
+    justify-content: center;
+    font-family: 'Concert One', sans-serif;
+    font-family: 'Leckerli One', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+    color: white;
+    margin-top: 5em;
+}
+
+.col{
+    display: flex;
+    justify-content: center;
+  }
+
+ .row{
+    margin-top: 5em;
+ } 
+  
+  
+ .card {
+    font-family: 'Concert One', sans-serif;
+    font-family: 'Leckerli One', cursive;
+    font-family: 'Oswald', sans-serif;
+    width: 15em;
+    height: 15em;
+    color: white;
+    font-size: 1.5em; /* Vergrößere die Schrift um 50% */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Übergangseffekt für Hintergrundfarbe */
+    display: flex; /* Flexbox verwenden */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+}
+  .card:hover {
+    transform: scale(1.05); /* Vergrößere die Karte leicht beim Überfahren */
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Dunkler Overlay mit 30% Deckkraft */
+    opacity: 0; /* Anfangs unsichtbar */
+    transition: opacity 0.3s; /* Übergangseffekt für die Opazität */
+  }
+  
+  .card:hover::before {
+    opacity: 1; /* Overlay sichtbar beim Überfahren */
+  }
+  
+  
+  .green { background-color: #00c481; }
+  .orange { background-color: #EC8F5E; }
+  .purple { background-color: #161616; }
+  .red { background-color: #dc0000; }
+
+  .text {
+    font-size: 44px; /* Standard-Schriftgröße */
+  }

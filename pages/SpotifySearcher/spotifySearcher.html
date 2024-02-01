@@ -7,6 +7,10 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Leckerli+One&family=Oswald:wght@500&display=swap" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="spotifySearcher.css">
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+         />
       <title>Portfolio</title>
    </head> 
 
@@ -17,8 +21,9 @@
             <nav>
                <div class="container text-left">
                      <div class="logo-col">
-                      <img class="logo" src="../../Logo1.svg" alt="LCA" width="100" height="80" onclick="window.location.href='../../Home/home.html'">
+                      <img class="animate__animated logo" src="../../Logo1.svg" alt="LCA" width="100" height="80" onclick="window.location.href='../../home.html'" onmouseenter="this.classList.add('animate__flash')" onmouseleave="this.classList.remove('animate__flash')">
                      </div>
+                     <!--
                      <div class="button-col">
                         <button  type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#myOffcanvas">
                            <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" style="color: white;">
@@ -32,7 +37,7 @@
                            <div class="offcanvas-body">
                                  <ul class="navbar-nav">
                                    <li class="nav-item">
-                                     <a class="nav-link" href="../../Home/home.html">HOME</a>
+                                     <a class="nav-link" href="../../home.html">HOME</a>
                                    </li>
                                    <li class="nav-item">
                                      <a class="nav-link" href="../Projekte/projekte.html">PROJEKTE</a>
@@ -42,28 +47,32 @@
                                   </li>
                                  </ul>
                          </div>
-                     </div>
+                     </div> -->
+
                </div>
             </nav>
           </div>
       </header>
 
       <main>
-        <h1 class="title">SpotyMood</h1>
+        <h1 class="animate__animated title" onmouseenter="this.classList.add('animate__headShake')" onmouseleave="this.classList.remove('animate__headShake')">SpotyMood</h1>
         <div class="container">
           <div class="row">
             <div class="col">
               <iframe src="https://player.vimeo.com/video/907184676?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="spotyMood"></iframe>            </div>
             <div class="col">
-              <p class="mood-p">Die Applikation habe ich 
-                designet und mit einem ReactJS frontend und einem Typescript backend 
-                programmiert. Mittels der SpotifyAPI habe ich die Daten der Playlistst geladen.
-                </p>
-            </br>
               <p class="mood-p">"SpotyMood" ist eine clevere App, die Nutzer:innen anhand einer Stimmungsangabe per Dropdown-Auswahl bis zu 50 passende Playlists präsentiert. Die Anwendung passt nicht nur die Musikauswahl an die gewählte Stimmung an, sondern optimiert auch die Benutzeroberfläche für ein noch angenehmeres Nutzererlebnis.</p>
             </br>
             <p class="mood-p">Die Hauptmission von "SpotyMood" ist es, Nutzer:innen eine unkomplizierte Möglichkeit zu bieten, Musik entsprechend ihrer aktuellen Stimmung zu entdecken und dabei eine individuelle, emotionale Verbindung zur Musik zu schaffen.</p>
           </br>
+          <p class="mood-p">Die Applikation habe ich 
+            designet und mit einem ReactJS frontend und einem Typescript backend 
+            programmiert. Mittels der SpotifyAPI habe ich die Daten der Playlistst geladen.
+            </p>
+        </br>
+        <p class="mood-p">Die Applikation ist für den gebrauch des Computers gedacht und somit nicht für ein Handy Bildschirm angepasst.
+          </p>
+      </br>
         <a href="https://spotymood.netlify.app" class="btn spotify-button">zur Applikation</a>
             </div>
       </main>

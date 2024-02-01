@@ -70,6 +70,7 @@ main{
 
 .eatfresh-p{
     color: white;
+    font-size: large;
 }
 
 .container{
@@ -90,6 +91,7 @@ main{
     background-color: #00c481;
     border-radius: 30px;
     color: white;
+    font-size: large;
 }
 
 .eatFresh-button:hover{

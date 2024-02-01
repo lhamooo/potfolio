@@ -70,12 +70,15 @@ main{
 
 .bake-p{
     color: white;
+    font-size: large;
 }
 
 .bakeflixButton{
     background-color: #dc0000;
     border-radius: 30px;
     color: white;
+    font-size: large;
+
 }
 
 .bakeflixButton:hover{

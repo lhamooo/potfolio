@@ -71,6 +71,7 @@ main{
 
 .aboutMe-p{
     color: white;
+    font-size: large;
 }
 
 .container{
@@ -79,4 +80,8 @@ main{
 
 .text{
     margin-top: 2em;
+}
+
+.foto{
+    margin-top: 1.5em;
 }

@@ -6,6 +6,10 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Leckerli+One&family=Oswald:wght@500&display=swap" rel="stylesheet">
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+         />
       <link rel="stylesheet" type="text/css" href="home.css">
       <title>Portfolio</title>
    </head> 
@@ -17,8 +21,9 @@
             <nav>
                <div class="container text-left">
                      <div class="logo-col">
-                        <img class="logo" src="Logo1.svg" alt="LCA" width="100" height="80" onclick="window.location.href='home.html'">
+                        <img class="animate__animated logo" src="Logo1.svg" alt="LCA" width="100" height="80" onclick="window.location.href='home.html'" onmouseenter="this.classList.add('animate__flash')" onmouseleave="this.classList.remove('animate__flash')">
                      </div>
+                     <!-- 
                      <div class="button-col">
                         <button  type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#myOffcanvas">
                            <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" style="color: white;">
@@ -42,19 +47,130 @@
                                   </li>
                                  </ul>
                          </div>
-                     </div>
+                     </div>-->
                </div>
+
             </nav>
           </div>
       </header>
 
       <main>
          <div class="name-container">
-            <h1 class="name">LHAMO</h1>
-            <h1 class="name">CLAUDIA</h1>
-            <h1 class="name"> ABO</h1>
+            <h1 class="animate__animated animate__tada name" id="myHeading" >
+               <span class="first-letter">L</span>HAMO&nbsp;
+               <span class="first-letter">C</span>LAUDIA&nbsp;
+               <span class="first-letter">A</span>BO
+           </h1>
+           
+           <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var heading = document.getElementById("myHeading");
+                
+                var tadaAnimationPlayed = false;
+                
+                heading.addEventListener("mouseenter", function() {
+                    if (!tadaAnimationPlayed) {
+                        heading.classList.remove("animate__tada");
+                        heading.classList.add("animate__pulse");
+                    }
+                });
+                
+                heading.addEventListener("mouseleave", function() {
+                    if (!tadaAnimationPlayed) {
+                        heading.classList.remove("animate__pulse");
+                        //heading.classList.add("animate__pulse");
+                    }
+                });
+                
+                heading.addEventListener("click", function() {
+                    tadaAnimationPlayed = true;
+                    window.location.href = "pages/AboutMe/aboutMe.html";
+                });
+            });
+            </script>
+        <!-- <button type="button" class="btn btn-light project-button" onclick="window.location.href='pages/Projekte/projekte.html'">zu den Projekten</button>  --> 
+
+         <div class="projekte">
+            <h2 class="titel-projekte">Projekte</h2>
          </div>
-         <button type="button" class="btn btn-light project-button" onclick="window.location.href='pages/Projekte/projekte.html'">zu den Projekten</button> 
+         <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Target-Element auswählen
+                var targetElement = document.querySelector(".titel-projekte");
+            
+                // Options für den Intersection Observer
+                var options = {
+                    root: null,
+                    rootMargin: "0px",
+                    threshold: 0.5 // 50% Sichtbarkeit
+                };
+            
+                // Callback-Funktion, die aufgerufen wird, wenn das Ziel-Element sichtbar wird
+                var callback = function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            // Füge die Animation-Klassen hinzu, wenn das Element sichtbar wird
+                            targetElement.classList.add("animate__animated", "animate__lightSpeedInLeft");
+                            // Entferne den Observer, um die Performance zu verbessern
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                };
+            
+                // Intersection Observer erstellen
+                var observer = new IntersectionObserver(callback, options);
+            
+                // Ziel-Element dem Observer hinzufügen
+                observer.observe(targetElement);
+            });
+            </script>
+
+   <div class = container>
+      <div class="row">
+         <div class="col">
+            <div class="card green" onmouseover="showText(this)" onclick="redirectToPage('green')" ></div>
+         </div>
+         <div class="col">
+            <div class="card orange" onmouseover="showText(this)" onclick="redirectToPage('orange')"></div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col">
+            <div class="card purple" onmouseover="showText(this)" onclick="redirectToPage('purple')"></div>
+         </div>
+         <div class="col">
+               <div class="card red" onmouseover="showText(this)" onclick="redirectToPage('red')"></div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      function showText(element) {
+        if (element.classList.contains('green')) {
+          element.innerHTML = "eat-fresh";
+        } else if (element.classList.contains('orange')) {
+          element.innerHTML = "spotyMood";
+        } else if (element.classList.contains('purple')) {
+          element.innerHTML = "RoomEscaper";
+        } else if (element.classList.contains('red')) {
+          element.innerHTML = "Bakeflix";
+        }
+      } 
+
+      function redirectToPage(color) {
+  if (color === 'green') {
+    window.location.href = 'pages/EatFresh/eatFresh.html'; // Hier die URL der grünen Seite einfügen
+  } else if (color === 'orange') {
+    window.location.href = 'pages/SpotifySearcher/spotifySearcher.html'; // Hier die URL der orangen Seite einfügen
+  } else if (color === 'purple') {
+    window.location.href = 'pages/Landingpage/landinpage.html'; // Hier die URL der violetten Seite einfügen
+  } else if (color === 'red') {
+    window.location.href = 'pages/bakeflix/bakeflix.html'; // Hier die URL der roten Seite einfügen
+  }
+}
+      </script>
+
+
       </main>
 
       <footer>
