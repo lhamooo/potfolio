@@ -1,9 +1,9 @@
 body {
-    background-color: black;
+    background-color: #789461;
   }
 
   .header-container{
-    background-color: black;
+    background-color: #789461;
   }
 
   .logo{
@@ -88,13 +88,13 @@ main{
 }
 
 .escaperButton{
-    background-color: #9B0000;
+    background-color: white;
     border-radius: 30px; 
-    color: white; 
+    color: #789461; 
     font-size: large;
 }
 
 .escaperButton:hover{
-    background-color: white; 
-    color: #9B0000
-}
+    background-color: #789461; 
+    color: white;
+    border-color: white;}

@@ -1,9 +1,9 @@
 body {
-    background-color: black;
+    background-color: #789461;
   }
 
   .header-container{
-    background-color: black;
+    background-color: #789461;
   }
 
   .logo{
@@ -89,13 +89,14 @@ main{
 }
 
 .spotify-button{
-    background-color:#EC8F5E ;
+    background-color:white ;
     border-radius: 30px;
-    color: white;
+    color: #789461;
     font-size: large;
 }
 
 .spotify-button:hover{
-    background-color: white;
-    color: #EC8F5E;
+    background-color: #789461;
+    color: white;
+    border-color: white;
 }

@@ -15,6 +15,8 @@
    </head> 
 
    <body>
+      <div class="hintergrund-image">
+      <div class="overlay">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
       <header>   
          <div class="header-container">
@@ -55,129 +57,114 @@
       </header>
 
       <main>
-         <div class="name-container">
-            <!--<h1 class="animate__animated animate__tada name" id="myHeading" >
-               <span class="first-letter">L</span>HAMO&nbsp;
-               <span class="first-letter">C</span>LAUDIA&nbsp;
-               <span class="first-letter">A</span>BO
-           </h1>-->
-           <img src="lhamo.gif" alt="Mein animiertes GIF" width="1500" class="gif">
+         
+
+         
+         <div class="name">
+            <h1 class="lhamo animate__animated" onmouseenter="this.classList.add('animate__pulse')" onmouseleave="this.classList.remove('animate__pulse')"> LHAMO</h1>
+         <h1 class="lhamo animate__animated" onmouseenter="this.classList.add('animate__pulse')" onmouseleave="this.classList.remove('animate__pulse')">CLAUDIA</h1>
+         <h1 class="lhamo animate__animated" onmouseenter="this.classList.add('animate__pulse')" onmouseleave="this.classList.remove('animate__pulse')">ABO</h1>
+
            </div>
 
-           <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var heading = document.getElementById("myHeading");
-                
-                var tadaAnimationPlayed = false;
-                
-                heading.addEventListener("mouseenter", function() {
-                    if (!tadaAnimationPlayed) {
-                        heading.classList.remove("animate__tada");
-                        heading.classList.add("animate__pulse");
-                    }
-                });
-                
-                heading.addEventListener("mouseleave", function() {
-                    if (!tadaAnimationPlayed) {
-                        heading.classList.remove("animate__pulse");
-                        //heading.classList.add("animate__pulse");
-                    }
-                });
-                
-                heading.addEventListener("click", function() {
-                    tadaAnimationPlayed = true;
-                    window.location.href = "pages/AboutMe/aboutMe.html";
-                });
-            });
-            </script>
-        <!-- <button type="button" class="btn btn-light project-button" onclick="window.location.href='pages/Projekte/projekte.html'">zu den Projekten</button>  --> 
-
-         <div class="projekte">
-            <h2 class="titel-projekte">Projekte</h2>
+         <div class="colored-aboutme">
+            <div class="container-aboutme">
+               <div class="row">
+                  <div class=" col col-foto">
+                    <img src="skizzen.jpg" alt="lhamo-claudia-abo" width="400" class="foto">
+                  </div>
+                  <div class="col text-aboutme">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col">
+                              <h1 class="aboutMe-h2 animate__animated" onmouseenter="this.classList.add('animate__shakeX')" onmouseleave="this.classList.remove('animate__shakeX')">Hallo!</h1>
+                           </br>
+                              <p class="aboutMe-p"> Mein Name ist Lhamo Claudia Abo, und ich bin 20 Jahre alt. Ursprünglich komme ich aus einer 4-jährigen Lehre als Applikationsentwicklerin EFZ. Die Welt des Programmierens hat mich von Anfang an fasziniert, doch während meiner Lehrzeit wurde mir klar, dass mir der gestalterische Aspekt fehlte.</p>
+                              </br>
+                              <p class="aboutMe-p">Die Erkenntnis, dass die Verbindung zwischen Technik und Gestaltung der Schlüssel zu meiner Leidenschaft ist, führte mich zu meiner aktuellen Bewerbung für den Studiengang Interaction Design. Der Reiz, sowohl den kreativen als auch den technischen Teil zu vereinen, macht für mich den besonderen Reiz dieses Studiengangs aus.</p>
+                           </div>
+                           <div class="col reihe2">
+                           </br>
+                        </br>
+                              <p class="aboutMe-p">Ich bin überzeugt, dass Interaction Design die Zukunft prägen wird, da wir uns in einer Zeit befinden, in der technologische Fortschritte im Sekundentakt erfolgen. Diese Dynamik begeistert mich und treibt mich an, innovative Lösungen zu schaffen, die sowohl ästhetisch ansprechend als auch funktional sind.</p>
+                           </br>
+                           <p class="aboutMe-p">Ich freue mich darauf, meine Leidenschaft für Design und Technologie im Studium weiter zu vertiefen und in dieser aufregenden Zeit der digitalen Transformation einen Beitrag zu leisten.</p>
+                           </div>
+                           
+                        </div>
+                     </div>
+                </div>
+                </div>
+            </div>
          </div>
-         <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // Target-Element auswählen
-                var targetElement = document.querySelector(".titel-projekte");
-            
-                // Options für den Intersection Observer
-                var options = {
-                    root: null,
-                    rootMargin: "0px",
-                    threshold: 0.5 // 50% Sichtbarkeit
-                };
-            
-                // Callback-Funktion, die aufgerufen wird, wenn das Ziel-Element sichtbar wird
-                var callback = function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            // Füge die Animation-Klassen hinzu, wenn das Element sichtbar wird
-                            targetElement.classList.add("animate__animated", "animate__lightSpeedInLeft");
-                            // Entferne den Observer, um die Performance zu verbessern
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                };
-            
-                // Intersection Observer erstellen
-                var observer = new IntersectionObserver(callback, options);
-            
-                // Ziel-Element dem Observer hinzufügen
-                observer.observe(targetElement);
-            });
-            </script>
 
-   <div class = container>
-      <div class="row">
-         <div class="col">
-            <div class="card green" onmouseover="showText(this)" onclick="redirectToPage('green')" ></div>
-         </div>
-         <div class="col">
-            <div class="card orange" onmouseover="showText(this)" onclick="redirectToPage('orange')"></div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col">
-            <div class="card purple" onmouseover="showText(this)" onclick="redirectToPage('purple')"></div>
-         </div>
-         <div class="col">
-               <div class="card red" onmouseover="showText(this)" onclick="redirectToPage('red')"></div>
-         </div>
-      </div>
-   </div>
+         <!--<div class="line-container">
+            <hr class="styled-line">
+          </div>-->
+      
+          <div class="container-projects">
+          </br>
+            <h1 class="text-projekte animate__animated" onmouseenter="this.classList.add('animate__tada')" onmouseleave="this.classList.remove('animate__tada')">Meine Projekte</h1>
 
-   <script>
-      function showText(element) {
-        if (element.classList.contains('green')) {
-          element.innerHTML = "eat-fresh";
-        } else if (element.classList.contains('orange')) {
-          element.innerHTML = "spotyMood";
-        } else if (element.classList.contains('purple')) {
-          element.innerHTML = "RoomEscaper";
-        } else if (element.classList.contains('red')) {
-          element.innerHTML = "Bakeflix";
-        }
-      } 
+            <div class="container">
+               <div class="row">
+                  <div class="col col-card">
+                     <div class="card" style="width: 25rem;" onclick="window.location.href='pages/EatFresh/eatFresh.html'" >
+                        <img class="card-img-top" src="pages/Projekte/eat-fresh.png" alt="eatFresh">
+                        <div class="card-body">
+                           <h5 class="card-title title-eatfresh">EatFresh</h5>
+                          <p class="card-text">ReactJS Applikation</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col col-card">
+                     <div class="card" style="width: 25rem;" onclick="window.location.href='pages/SpotifySearcher/spotifySearcher.html'">
+                        <img class="card-img-top" src="pages/Projekte/SpotyMood.png" alt="spotyMood">
+                        <div class="card-body">
+                           <h5 class="card-title title-spotymood">SpotyMood</h5>
+                          <p class="card-text">ReactJS Applikation</p>
+                        </div>
+                      </div>
+                  </div>
+               </div>
 
-      function redirectToPage(color) {
-  if (color === 'green') {
-    window.location.href = 'pages/EatFresh/eatFresh.html'; // Hier die URL der grünen Seite einfügen
-  } else if (color === 'orange') {
-    window.location.href = 'pages/SpotifySearcher/spotifySearcher.html'; // Hier die URL der orangen Seite einfügen
-  } else if (color === 'purple') {
-    window.location.href = 'pages/Landingpage/landinpage.html'; // Hier die URL der violetten Seite einfügen
-  } else if (color === 'red') {
-    window.location.href = 'pages/bakeflix/bakeflix.html'; // Hier die URL der roten Seite einfügen
-  }
-}
-      </script>
+               <div class="row">
+                  <div class="col col-card">
+                     <div class="card" style="width: 25rem;" onclick="window.location.href='pages/Landingpage/landinpage.html'">
+                        <img class="card-img-top" src="pages/Projekte/RoomEscaperStart.png" alt="roomescaper">
+                        <div class="card-body">
+                           <h5 class="card-title title-roomescaper">Roomescaper</h5>
+                          <p class="card-text">Figma Prototyp</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col col-card">
+                     <div class="card" style="width: 25rem;" onclick="window.location.href='pages/bakeflix/bakeflix.html'">
+                        <img class="card-img-top" src="pages/Projekte/bakeflix.png" alt="bakeflix">
+                        <div class="card-body">
+                           <h5 class="card-title title-bakeflix">Bakeflix</h5>
+                          <p class="card-text">Videoprojekt</p>
+                        </div>
+                      </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container-space">
+               <br><br><br><br><br><br><br><br>
+             </div>
+          </div>
 
+          
 
       </main>
 
       <footer>
+         
+         
             
       </footer>
+   </div>
+</div>
 
     </body>
 
